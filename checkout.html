@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d79aec2d94.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="sharedLayout"></div>
+<div class="checkout-container">
+  <header class="header">
+    <h1 class="checkHead">ShopNow</h1>
+  </header>
+  <main class="checkout-main">
+    <div class="checkout-form">
+      <h2>Checkout</h2>
+      <div class="shipping-options">
+        <label class="radio-option">
+          <input type="radio" name="shipping" checked>
+          Delivery
+        </label>
+        <!-- <label class="radio-option">
+          <input type="radio" name="shipping">
+          Pick up
+        </label> -->
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="fullName">Full name *</label>
+          <input type="text" id="fullName" class="styled-input" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+          <label for="userEmail">Email address *</label>
+          <input type="email" id="userEmail" class="styled-input" placeholder="Enter email address" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address *</label>
+          <input type="text" id="address" class="styled-input" placeholder="Your address" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number *</label>
+          <input type="tel" id="phone" class="styled-input" placeholder="Enter phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="country">Country *</label>
+          <select id="country" class="styled-input" required>
+            <option value="">Choose country</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="canada">Canada</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="zip">ZIP Code</label>
+          <input type="text" id="zip" class="styled-input" placeholder="Enter ZIP code">
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" class="styled-checkbox" required>
+            I have read and agree to the Terms and Conditions.
+          </label>
+        </div>
+      </form>
+      <div id="payment-status" style="display:none;">
+        <h2>Payment Status</h2>
+        <p id="status-message"></p>
+      </div>
+    
+    </div>
+    <div class="cart-summary">
+      <h3>Review your cart</h3>
+      <!-- <div class="cart-item">
+        <img src="sofa.png" alt="Sofa">
+        <div>
+          <p class="item-name">DuoComfort Sofa Premium</p>
+          <p class="item-price">$20.00</p>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="desk.png" alt="Desk">
+        <div>
+          <p class="item-name">IronOne Desk</p>
+          <p class="item-price">$25.00</p>
+        </div>
+      </div>
+      <div class="discount-code">
+        <input type="text" class="styled-input" placeholder="Discount code">
+        <button class="apply-btn">Apply</button>
+      </div> -->
+      <div class="summary">
+        <!-- <p>Subtotal: $<span id="cartTotal">45.00</span></p> -->
+        <p>Shipping:<span id="shipping"></span></p>
+        <!-- <p>Discount: <span>-$10.00</span></p> -->
+        <p>Total: <span id="checkoutTotal"></span></p>
+      </div>
+      <button class="pay-now" id="pay-now-btn" type="button">Pay Now</button>
+      <p class="secure-checkout">Secure Checkout - SSL Encrypted</p>
+    </div>
+  </main>
+</div>
+
+
+  <!-- <script src="https://checkout.flutterwave.com/v3.js"></script> -->
+
+
+  
+  
+  <script src="/script.js"></script>
+  <script src="/shared.js" defer></script>
+</body>
+</html>

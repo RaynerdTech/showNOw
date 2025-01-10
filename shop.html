@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow > Shop</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/shop.css">
+    <script src="https://kit.fontawesome.com/d79aec2d94.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="sharedLayout"></div> <!-- Placeholder for shared layout -->
+    <div class="shop-container">
+        <button id="filterToggle" class="filter-toggle">
+            <i class="fas fa-filter"></i>
+        </button>
+        <!-- Sidebar for filters -->
+        <aside class="sidebar">
+            <h3>Filter Products</h3>
+            
+            <!-- Filter by Category -->
+            <div class="filter-group">
+                <h4>Category</h4>
+                <div id="category-filters">
+                    <label><input type="checkbox" value="Men's Clothing"> Men's Clothing</label>
+                    <label><input type="checkbox" value="Women's Clothing"> Women's Clothing</label>
+                    <label><input type="checkbox" value="Kids' Clothing"> Kids' Clothing</label>
+                    <label><input type="checkbox" value="Accessories"> Accessories</label>
+                    <label><input type="checkbox" value="Footwear"> Footwear</label>
+                    <label><input type="checkbox" value="Activewear"> Activewear</label>
+                    <label><input type="checkbox" value="Outerwear"> Outerwear</label>
+                    <label><input type="checkbox" value="Formalwear"> Formalwear</label>
+                    <label><input type="checkbox" value="Casualwear"> Casualwear</label>
+                    <label><input type="checkbox" value="Ethnicwear"> Ethnicwear</label>
+                </div>
+            </div>
+            
+            <!-- Filter by Brand -->
+            <div class="filter-group">
+                <h4>Brands</h4>
+                <select id="brand-filter" multiple>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Puma">Puma</option>
+                    <option value="Levi's">Levi's</option>
+                    <option value="Gucci">Gucci</option>
+                    <option value="Prada">Prada</option>
+                    <option value="Versace">Versace</option>
+                    <option value="Zara">Zara</option>
+                    <option value="H&M">H&M</option>
+                    <option value="Uniqlo">Uniqlo</option>
+                    <option value="Under Armour">Under Armour</option>
+                    <option value="Calvin Klein">Calvin Klein</option>
+                    <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+                </select>
+                
+            </div>
+            
+            <!-- Filter by Price -->
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <input type="range" id="price-filter" min="10" max="5000" step="50">
+                <span id="price-value">$10 - $5000</span>
+            </div>
+            
+            <!-- Reset Filters -->
+            <button id="reset-filters">Reset Filters</button>
+        </aside>
+        
+        <!-- Product Display -->
+        <div class="products">
+            <div class="product-contents">
+                <h3>Shop Products</h3>
+                <div class="product-list">
+                    <!-- Products will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/shared.js" defer></script>
+    <script src="/loadProducts.js"></script>
+    <script src="/script.js" defer></script>
+
+</body>
+</html>
