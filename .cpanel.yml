@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOY_PATH=/home/raynerdc/public_html/atandt.me.raynerd.raynerd.com.ng
+    - rsync -av --exclude='.vscode' --exclude='.git' ./ $DEPLOY_PATH
