@@ -119,7 +119,7 @@ document.addEventListener('sharedLayoutLoaded', () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/register", {
+      const response = await fetch("https://shopnow.raynerd.com.ng/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, gender }),
@@ -225,7 +225,7 @@ document.addEventListener('sharedLayoutLoaded', () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/login", {
+      const response = await fetch("https://shopnow.raynerd.com.ng/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -330,7 +330,7 @@ document.addEventListener('sharedLayoutLoaded', () => {
         return;
       }
 
-      fetch('http://localhost:8000/add-cart', {
+      fetch('https://shopnow.raynerd.com.ng/add-cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -404,7 +404,7 @@ document.addEventListener('sharedLayoutLoaded', () => {
       const payload = { productId };
       if (action === 'increment') payload.quantity = 1;
 
-      fetch(`http://localhost:8000${endpoint}`, {
+      fetch(`https://shopnow.raynerd.com.ng${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -510,7 +510,7 @@ const fetchCart = async () => {
       return; // Exit gracefully without making the fetch request
     }
 
-    const response = await fetch('http://localhost:8000/cart', {
+    const response = await fetch('https://shopnow.raynerd.com.ng/cart', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${authToken}`, // Include authToken for authentication
@@ -561,7 +561,7 @@ document.getElementById('clearCart').addEventListener('click', async () => {
       return; // Exit gracefully without making the fetch request
     }
       // Send DELETE request to clear cart API
-      const response = await fetch('http://localhost:8000/clear-cart', {
+      const response = await fetch('https://shopnow.raynerd.com.ng/clear-cart', {
           method: 'DELETE',
           headers: {
               'Content-Type': 'application/json',
@@ -618,7 +618,7 @@ const fetchFilteredProducts = async (query) => {
     // Show loading indicator and overlay
     showLoadingOverlay();
 
-    const response = await fetch(`http://localhost:8000/products?name=${encodeURIComponent(query)}`);
+    const response = await fetch(`https://shopnow.raynerd.com.ng/products?name=${encodeURIComponent(query)}`);
     const data = await response.json();
 
     // Hide loading indicator and overlay once the data is fetched
@@ -711,7 +711,7 @@ clearSearchBtn.addEventListener('click', () => {
   showLoadingOverlay();
 
   // Fetch and display all products
-  fetch('http://localhost:8000/products')
+  fetch('https://shopnow.raynerd.com.ng/products')
     .then(response => response.json())
     .then(data => {
       if (data && data.data && data.data.length > 0) {
@@ -779,7 +779,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           const queryString = queryParams.toString();
-          const url = `http://localhost:8000/products${queryString ? `?${queryString}` : ''}`;
+          const url = `https://shopnow.raynerd.com.ng/products${queryString ? `?${queryString}` : ''}`;
           
           showLoadingOverlay();
           
@@ -938,7 +938,7 @@ document.addEventListener('sharedLayoutLoaded', () => {
       return; // Exit gracefully without making the fetch request
     }
 
-          const response = await fetch('http://localhost:8000/initiate-payment', {
+          const response = await fetch('https://shopnow.raynerd.com.ng/initiate-payment', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
