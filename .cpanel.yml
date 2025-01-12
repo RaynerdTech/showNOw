@@ -1,5 +1,14 @@
 ---
 deployment:
   tasks:
-    - export DEPLOY_PATH=/home/raynerdc/public_html/shopnow.raynerd.com.ng
-    - rsync -av --exclude='.vscode' --exclude='.git' ./ $DEPLOY_PATH
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp shop.html $DEPLOYPATH
+    - /bin/cp shop.css $DEPLOYPATH
+    - /bin/cp sharedfile.html $DEPLOYPATH
+    - /bin/cp shared.js $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp loadProducts.js $DEPLOYPATH
+    - /bin/cp checkout.html $DEPLOYPATH
+    - /bin/cp checkout.css $DEPLOYPATH
