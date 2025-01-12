@@ -12,3 +12,4 @@ deployment:
     - /bin/cp loadProducts.js $DEPLOYPATH
     - /bin/cp checkout.html $DEPLOYPATH
     - /bin/cp checkout.css $DEPLOYPATH
+    - /bin/cp -r images $DEPLOYPATH
