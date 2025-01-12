@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://shopnow.raynerd.com.ng/products')
+    fetch('https://ecommerce-deploy-pwez.onrender.com/products')
       .then(response => response.json())
       .then(data => {
         if (data && data.data && data.data.length > 0) {
