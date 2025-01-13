@@ -22,23 +22,23 @@
             <div class="filter-group">
                 <h4>Category</h4>
                 <div id="category-filters">
-                    <label><input type="checkbox" value="Men's Clothing"> Men's Clothing</label>
-                    <label><input type="checkbox" value="Women's Clothing"> Women's Clothing</label>
-                    <label><input type="checkbox" value="Kids' Clothing"> Kids' Clothing</label>
-                    <label><input type="checkbox" value="Accessories"> Accessories</label>
-                    <label><input type="checkbox" value="Footwear"> Footwear</label>
-                    <label><input type="checkbox" value="Activewear"> Activewear</label>
-                    <label><input type="checkbox" value="Outerwear"> Outerwear</label>
-                    <label><input type="checkbox" value="Formalwear"> Formalwear</label>
-                    <label><input type="checkbox" value="Casualwear"> Casualwear</label>
-                    <label><input type="checkbox" value="Ethnicwear"> Ethnicwear</label>
+                    <label for="mens-clothing"><input type="checkbox" id="mens-clothing" name="category" value="Men's Clothing"> Men's Clothing</label>
+                    <label for="womens-clothing"><input type="checkbox" id="womens-clothing" name="category" value="Women's Clothing"> Women's Clothing</label>
+                    <label for="kids-clothing"><input type="checkbox" id="kids-clothing" name="category" value="Kids' Clothing"> Kids' Clothing</label>
+                    <label for="accessories"><input type="checkbox" id="accessories" name="category" value="Accessories"> Accessories</label>
+                    <label for="footwear"><input type="checkbox" id="footwear" name="category" value="Footwear"> Footwear</label>
+                    <label for="activewear"><input type="checkbox" id="activewear" name="category" value="Activewear"> Activewear</label>
+                    <label for="outerwear"><input type="checkbox" id="outerwear" name="category" value="Outerwear"> Outerwear</label>
+                    <label for="formalwear"><input type="checkbox" id="formalwear" name="category" value="Formalwear"> Formalwear</label>
+                    <label for="casualwear"><input type="checkbox" id="casualwear" name="category" value="Casualwear"> Casualwear</label>
+                    <label for="ethnicwear"><input type="checkbox" id="ethnicwear" name="category" value="Ethnicwear"> Ethnicwear</label>
                 </div>
             </div>
             
             <!-- Filter by Brand -->
             <div class="filter-group">
                 <h4>Brands</h4>
-                <select id="brand-filter" multiple>
+                <select id="brand-filter" name="brand" multiple>
                     <option value="Nike">Nike</option>
                     <option value="Adidas">Adidas</option>
                     <option value="Puma">Puma</option>
@@ -53,18 +53,17 @@
                     <option value="Calvin Klein">Calvin Klein</option>
                     <option value="Tommy Hilfiger">Tommy Hilfiger</option>
                 </select>
-                
             </div>
             
             <!-- Filter by Price -->
             <div class="filter-group">
                 <h4>Price Range</h4>
-                <input type="range" id="price-filter" min="10" max="5000" step="50">
+                <input type="range" id="price-filter" min="10" max="5000" step="50" name="price">
                 <span id="price-value">$10 - $5000</span>
             </div>
             
             <!-- Reset Filters -->
-            <button id="reset-filters">Reset Filters</button>
+            <button id="reset-filters" type="reset">Reset Filters</button>
         </aside>
         
         <!-- Product Display -->
@@ -81,6 +80,6 @@
     <script src="/shared.js" defer></script>
     <script src="/loadProducts.js"></script>
     <script src="/script.js" defer></script>
-
 </body>
+
 </html>
