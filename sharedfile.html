@@ -6,51 +6,63 @@
 </div>
 
 <header>
-<div class="logo">
-<h1>Shop<span>Now</span></h1>
-</div>
-
-<div class="navbar" id="navbar">
-<nav>
-<div id="Navlogo">
-<h1>Shop<span>Now</span></h1>
-</div>
-<i class="fa-solid fa-xmark" id="close"></i>
-<ul>
-<li><a href="/index.html">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="/shop.html">Shop</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
-</div>
-
-<div class="icons">
-<div class="search-container">
-<input
-type="text"
-class="search-input"
-name="searchQuery"
-id="searchQuery"
-placeholder="Search..."
-autocomplete="on"
-/>
-<button class="clear-search-btn" type="reset" for="searchQuery">Reset</button>
-</div>
-
-<i class="fa-solid fa-circle-question" title="ShopNow is a the home for beauty! We can make you beautiful and still save your pocket"></i>
-<div class="register">
-<i class="fa-solid fa-user"></i>
-</div>
-<div class="cart">
-<i class="fa-solid fa-cart-shopping"  id="fa-cart-shopping"></i>
-<span id="cart-product">0</span>
-</div>
-<i class="fa-solid fa-bars" id="open"></i>
-</div>
-
-</header>
+  <div class="logo">
+  <h1>Shop<span>Now</span></h1>
+  </div>
+  
+  <div class="navbar" id="navbar">
+  <nav>
+  <div id="Navlogo">
+      <h1>Shop<span>Now</span></h1>
+      </div>
+  <i class="fa-solid fa-xmark" id="close"></i>
+  <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="/shop.html">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+  </ul>
+  </nav>
+  </div>
+  
+  <div class="icons">
+  
+  <div class="overallsearch">
+  <div class="headerSearch">
+    <button id="toggleSearch" class="search-icon">
+      <i class="fas fa-search"></i>
+    </button>
+    <div class="search-container" id="searchContainer">
+      <input
+        type="text"
+        class="search-input"
+        name="searchQuery"
+        id="searchQuery"
+        placeholder="Search..."
+        autocomplete="on"
+      />
+      <button class="clear-search-btn" type="reset">Reset</button>
+      <button id="closeSearch" class="close-icon">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  </div>
+  
+  
+  <i class="fa-solid fa-circle-question" title="ShopNow is a the home for beauty! We can make you beautiful and still save your pocket"></i>
+  <div class="register">
+  <i class="fa-solid fa-user"></i>
+  </div>
+  <div class="cart">
+  <i class="fa-solid fa-cart-shopping"  id="fa-cart-shopping"></i>
+  <span id="cart-product">0</span>
+  </div>
+  <i class="fa-solid fa-bars" id="open"></i>
+  </div>
+  
+      </header>
 
 <!-------Cart lists-->
 <div class="cart-list" id="cartList">

@@ -546,11 +546,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
 //CLEAR CART 
 document.addEventListener('sharedLayoutLoaded', () => {
 document.getElementById('clearCart').addEventListener('click', async () => {
@@ -889,6 +884,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ... existing code ...
 });
+
+
+document.addEventListener("sharedLayoutLoaded", () => {
+  const toggleSearchBtn = document.getElementById("toggleSearch");
+  const searchContainer = document.getElementById("searchContainer");
+  const closeSearchBtn = document.getElementById("closeSearch");
+  const header = document.querySelector(".headerSearch");
+
+  // Toggle search container
+  toggleSearchBtn.addEventListener("click", () => {
+    searchContainer.classList.add("active");
+    header.classList.add("toggled"); // Move the header to the left
+  });
+
+  // Close search container
+  closeSearchBtn.addEventListener("click", () => {
+    searchContainer.classList.remove("active");
+    header.classList.remove("toggled"); // Reset header position
+  });
+
+  // Close search when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      !searchContainer.contains(event.target) &&
+      !toggleSearchBtn.contains(event.target)
+    ) {
+      searchContainer.classList.remove("active");
+      header.classList.remove("toggled"); // Reset header position
+    }
+  });
+});
+
 
 
 document.addEventListener('sharedLayoutLoaded', () => {
