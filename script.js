@@ -914,7 +914,7 @@ document.addEventListener("sharedLayoutLoaded", () => {
       header.classList.remove("toggled"); // Reset header position
     }
   });
-});
+ });
 
 
 
