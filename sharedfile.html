@@ -1,10 +1,3 @@
-<div class="attention-text">
-  <div class="attention">
-<i>Shop Best At ShopNow Right Now</i>
-<i class="fa-solid fa-x"></i>
-</div>
-</div>
-
 <header>
   <div class="logo">
   <h1>Shop<span>Now</span></h1>
@@ -59,119 +52,119 @@
   <i class="fa-solid fa-cart-shopping"  id="fa-cart-shopping"></i>
   <span id="cart-product">0</span>
   </div>
-   <i class="fa-solid fa-bars" id="open"></i>
+  <i class="fa-solid fa-bars" id="open"></i>
   </div>
   
-       </header>
-
-<!-------Cart lists-->
-<div class="cart-list" id="cartList">
-  <div class="cartList-content" id="cartItems">
-      
-      <!-- Products will be dynamically added here -->
-      
-  </div>
-
-  <div class="cart-settings">
-      <div class="closecheck-btn">
-          <div class="closecartbtn" id="closecartbtn">
-              <p>close</p>
+      </header>
+  
+      <!-------Cart lists-->
+      <div class="cart-list" id="cartList">
+          <div class="cartList-content" id="cartItems">
+              
+              <!-- Products will be dynamically added here -->
+              
           </div>
-          <div class="checkcartbtn">
-              <button class="checkcartbtn button">Checkout</button>
+      
+          <div class="cart-settings">
+              <div class="closecheck-btn">
+                  <div class="closecartbtn" id="closecartbtn">
+                      <p>close</p>
+                  </div>
+                  <div class="checkcartbtn">
+                      <button class="checkcartbtn button">Checkout</button>
+                  </div>
+              </div>
+      
+              <div class="clearall-btn" id="clearCart">
+                  <p>clear all</p>
+              </div>
+              <div class="cart-total">
+                  <p>Total: $<span id="cartTotal">0</span></p>
+              </div>
           </div>
       </div>
-
-      <div class="clearall-btn" id="clearCart">
-          <p>clear all</p>
+      
+  
+      <!---------REGISTER USER------>
+      <!-- Registration Form -->
+  <div class="form-container hidden">
+  <div class="form-toggle">
+      <span id="loginTab">LOGIN</span>
+      <span id="registerTab" class="active-tab">REGISTER</span>
+    </div>
+    <button class="close-form"><i class="fa-regular fa-rectangle-xmark"></i></button>
+    <form id="registerForm" class="form" autocomplete="on">
+      <div class="form-group">
+        <input type="text" id="name" name="name" class="form-input" placeholder="Name" required autocomplete="name" />
       </div>
-      <div class="cart-total">
-          <p>Total: $<span id="cartTotal">0</span></p>
+      <div class="form-group">
+        <input type="email" id="email" name="email" class="form-input" placeholder="Email" required autocomplete="email" />
       </div>
+      <div class="form-group">
+        <div class="password-container">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-input"
+              placeholder="Password"
+              required autocomplete="new-password"
+            />
+            <span class="toggle-password fas fa-eye" id="togglePasswordRegister"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <select id="gender" name="gender" class="form-input" required autocomplete="gender">
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <button type="submit" class="form-button">Register</button>
+      <div id="spinner" class="hiddenSpin"></div>
+    </form>
+    
+  <div id="registerMessage"></div>
+  
+  <!-- Login Form -->
+  <form id="loginForm" class="form" autocomplete="on">
+    <div class="form-group">
+      <input
+        type="text"
+        id="loginEmail"
+        name="loginEmail"
+        class="form-input"
+        placeholder="Username or Email Address"
+        required
+        autocomplete="username"
+      />
+    </div>
+  
+    <div class="form-group">
+      <div class="password-container">
+        <input
+          type="password"
+          id="loginPassword"
+          name="loginPassword"
+          class="form-input"
+          placeholder="Password"
+          required
+          autocomplete="current-password"
+        />
+        <span class="toggle-password fas fa-eye" id="togglePassword"></span>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>
+        <input type="checkbox" id="rememberMe" name="rememberMe" /> Remember me
+      </label>
+    </div>
+    
+    <button type="submit" class="form-button">Log In</button>
+    <div id="loginSpinner" class="hiddenSpin"></div>
+  </form>
+  
+  <div id="loginMessage"></div>
   </div>
-</div>
-
-
-<!---------REGISTER USER------>
-<!-- Registration Form -->
-<div class="form-container hidden">
-<div class="form-toggle">
-<span id="loginTab">LOGIN</span>
-<span id="registerTab" class="active-tab">REGISTER</span>
-</div>
-<button class="close-form"><i class="fa-regular fa-rectangle-xmark"></i></button>
-<form id="registerForm" class="form" autocomplete="on">
-<div class="form-group">
-<input type="text" id="name" name="name" class="form-input" placeholder="Name" required autocomplete="name" />
-</div>
-<div class="form-group">
-<input type="email" id="email" name="email" class="form-input" placeholder="Email" required autocomplete="email" />
-</div>
-<div class="form-group">
-<div class="password-container">
-    <input
-      type="password"
-      id="password"
-      name="password"
-      class="form-input"
-      placeholder="Password"
-      required autocomplete="new-password"
-    />
-    <span class="toggle-password fas fa-eye" id="togglePasswordRegister"></span>
-</div>
-</div>
-<div class="form-group">
-<select id="gender" name="gender" class="form-input" required autocomplete="gender">
-  <option value="" disabled selected>Select Gender</option>
-  <option value="male">Male</option>
-  <option value="female">Female</option>
-  <option value="other">Other</option>
-</select>
-</div>
-<button type="submit" class="form-button">Register</button>
-<div id="spinner" class="hiddenSpin"></div>
-</form>
-
-<div id="registerMessage"></div>
-
-<!-- Login Form -->
-<form id="loginForm" class="form" autocomplete="on">
-<div class="form-group">
-<input
-type="text"
-id="loginEmail"
-name="loginEmail"
-class="form-input"
-placeholder="Username or Email Address"
-required
-autocomplete="username"
-/>
-</div>
-
-<div class="form-group">
-<div class="password-container">
-<input
-  type="password"
-  id="loginPassword"
-  name="loginPassword"
-  class="form-input"
-  placeholder="Password"
-  required
-  autocomplete="current-password"
-/>
-<span class="toggle-password fas fa-eye" id="togglePassword"></span>
-</div>
-</div>
-
-<div class="form-group">
-<label>
-<input type="checkbox" id="rememberMe" name="rememberMe" /> Remember me
-</label>
-</div>
-
-<button type="submit" class="form-button">Log In</button>
-<div id="loginSpinner" class="hiddenSpin"></div>
-</form>
-
-<div id="loginMessage"></div>
-</div>

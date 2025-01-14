@@ -1,156 +1,155 @@
 :root {
-    --color-background: #f9f9f9;
-    --color-primary: #5000d1;
-    --color-secondary: #333;
-    --color-border: #ddd;
-    --color-hover: #320083;
-    --color-text: #555;
-    --font-family: 'Roboto', sans-serif;
-  }
-  
+  --color-background: #f9f9f9;
+  --color-primary: #5000d1;
+  --color-secondary: #333;
+  --color-border: #ddd;
+  --color-hover: #320083;
+  --color-text: #555;
+  --font-family: 'Roboto', sans-serif;
+}
 
-  
-  .shop-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-  }
-  
+
+
+.shop-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+  max-height: fit-content;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-group {
+  margin-bottom: 30px;
+}
+
+.filter-group h4 {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.filter-toggle {
+  display: none;
+  position: fixed;
+  left: 10px;
+  top: 300px;
+  z-index: 10;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#category-filters label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+#category-filters input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#brand-filter {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+#price-filter {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#price-value {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  display: block;
+  margin-top: 8px;
+}
+
+#reset-filters {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#reset-filters:hover {
+  background-color: var(--color-hover);
+}
+
+
+@media (max-width: 600px) {
   .sidebar {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-border);
-    max-height: fit-content;
-    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%; /* Control sidebar width */
+    background: #fff;
+    z-index: 9;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Firefox */
   }
-  
-  .sidebar h3 {
-    font-size: 1.5rem;
-    color: var(--color-secondary);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .filter-group {
-    margin-bottom: 30px;
-  }
-  
-  .filter-group h4 {
-    font-size: 1.2rem;
-    color: var(--color-secondary);
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--color-primary);
-    display: inline-block;
-    padding-bottom: 4px;
+
+  .sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+  .sidebar.active {
+      transform: translateX(0);
   }
 
   .filter-toggle {
-    display: none;
-    position: fixed;
-    left: 10px;
-    top: 300px;
-    z-index: 10;
-    padding: 10px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
+      display: block;
+  }
 }
-  
-  #category-filters label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: var(--color-text);
-    cursor: pointer;
-  }
-  
-  #category-filters input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  #brand-filter {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    font-size: 1rem;
-    background-color: var(--color-background);
-    color: var(--color-text);
-  }
-  
-  #price-filter {
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  #price-value {
-    font-size: 0.9rem;
-    color: var(--color-secondary);
-    display: block;
-    margin-top: 8px;
-  }
-  
-  #reset-filters {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #reset-filters:hover {
-    background-color: var(--color-hover);
-  }
-  
-
-   @media (max-width: 600px) {
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100vh;
-      width: 80%; /* Control sidebar width */
-      background: #fff;
-      z-index: 9;
-      transform: translateX(-100%);
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-      overflow-y: auto; /* Enable vertical scrolling */
-      -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-      scrollbar-width: thin; /* Firefox */
-      scrollbar-color: #888 #f1f1f1; /* Firefox */
-    }
-
-    .sidebar::-webkit-scrollbar {
-      width: 5px;
-  }
-
-  .sidebar::-webkit-scrollbar-track {
-      background: #f1f1f1;
-  }
-
-  .sidebar::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 4px;
-  }
-
-  .sidebar::-webkit-scrollbar-thumb:hover {
-      background: #555;
-  }
-
-    .sidebar.active {
-        transform: translateX(0);
-    }
-
-    .filter-toggle {
-        display: block;
-    }
-}
-  

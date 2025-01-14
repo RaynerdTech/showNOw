@@ -1,20 +1,3 @@
-// ATTENTION TEXT CLOSE 
-document.addEventListener('sharedLayoutLoaded', function() {
-    let closeButton = document.querySelector('.fa-x');
-    let attentionText = document.querySelector('.attention-text');
-
-    closeButton.addEventListener('click', function() {
-        attentionText.style.visibility = 'hidden';
-        attentionText.style.height = '0';
-    });
-
-    // Ensure the attention text is visible when the page loads
-    attentionText.style.visibility = 'visible';
-});
-
-
-
-
 // QUESTION TOGGLES
 document.addEventListener('sharedLayoutLoaded', function() {
     let icon = document.querySelector('.fa-circle-question');
