@@ -41,6 +41,9 @@ body {
   row-gap: 100px;
 }
 
+#sharedLayout {
+margin-bottom: 100px;
+}
 
 .banner {
   grid-area: banner;
@@ -973,7 +976,7 @@ nav>ul>li>a:hover {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 30;
+      z-index: 300;
       background: rgba(0, 29, 111, 0.8);
       backdrop-filter: blur(10.5px);
       -webkit-backdrop-filter: blur(10.5px);

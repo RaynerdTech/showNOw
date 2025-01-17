@@ -14,27 +14,54 @@ document.addEventListener('sharedLayoutLoaded', () => {
   let menu = document.getElementById("navbar");
   let openNav = document.getElementById("open");
   let closeNav = document.getElementById("close");
+  let filterToggle = document.querySelector(".filter-toggle"); // Select the filter-toggle element
 
-  openNav.addEventListener('click', function() {
-      if (menu.classList.contains("closing") || !menu.classList.contains("open")) {
-          menu.classList.remove("closing");
-          menu.classList.add("open");
-          menu.style.visibility = "visible"; // Ensure it's visible
+  const handleResize = () => {
+    const isSmallScreen = window.innerWidth <= 600;
+
+    // Show filter-toggle only when the menu is closed on small screens
+    if (!menu.classList.contains("open") && isSmallScreen) {
+      filterToggle.style.display = "block";
+    } else {
+      filterToggle.style.display = "none";
+    }
+  };
+
+  openNav.addEventListener('click', function () {
+    if (menu.classList.contains("closing") || !menu.classList.contains("open")) {
+      menu.classList.remove("closing");
+      menu.classList.add("open");
+      menu.style.visibility = "visible"; // Ensure it's visible
+
+      // Hide the filter-toggle when the menu is opened
+      if (filterToggle) {
+        filterToggle.style.display = "none";
       }
+    }
   });
 
-  closeNav.addEventListener('click', function() {
-      if (menu.classList.contains("open")) {
-          menu.classList.remove("open");
-          menu.classList.add("closing");
+  closeNav.addEventListener('click', function () {
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+      menu.classList.add("closing");
 
-          // Use a timeout to hide the element after the animation completes
-          setTimeout(function() {
-              menu.style.visibility = "hidden";
-          }, 500); // Match this to the duration of your CSS transition
-      }
+      // Use a timeout to hide the element after the animation completes
+      setTimeout(function () {
+        menu.style.visibility = "hidden";
+
+        // Show filter-toggle only on small screens when the menu is closed
+        handleResize();
+      }, 500); // Match this to the duration of your CSS transition
+    }
   });
+
+  // Check screen size on resize
+  window.addEventListener("resize", handleResize);
+
+  // Initial check on page load
+  handleResize();
 });
+
 
 
 

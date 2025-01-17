@@ -119,7 +119,7 @@
     height: 100vh;
     width: 80%; /* Control sidebar width */
     background: #fff;
-    z-index: 9;
+    z-index: 100;
     transform: translateX(-100%);
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     overflow-y: auto; /* Enable vertical scrolling */
@@ -151,5 +151,6 @@
 
   .filter-toggle {
       display: block;
+      z-index: 101;
   }
 }
