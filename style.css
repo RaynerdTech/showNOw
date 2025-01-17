@@ -38,11 +38,11 @@ body {
   'contact'
   'footer';
   grid-template-rows: repeat(10, auto);
-  row-gap: 100px;
+  row-gap: 70px;
 }
 
 #sharedLayout {
-margin-bottom: 100px;
+margin-bottom: 70px;
 }
 
 .banner {
