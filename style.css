@@ -42,12 +42,79 @@ body {
 }
 
 #sharedLayout {
-margin-bottom: 70px;
+margin-bottom: 100px;
 }
 
+
+/***********************/
 .banner {
   grid-area: banner;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
+
+.banner-promo {
+background-color: #002dd054;
+width: 92%;
+height: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+position: relative;
+border-radius: 50px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+display: flex;
+flex-direction: column;
+row-gap: 14px;
+padding: 15px 0;
+}
+
+.banner-content h2 {
+font-size: 4vw; 
+}
+
+.banner-content p {
+font-size: 18px; 
+}
+
+.banner-image {
+margin-top: auto;
+}
+
+.banner-image img {
+width: 100%;  
+height: auto; 
+max-width: 700px; 
+object-fit: cover;
+margin-top: auto;
+margin-bottom: -4px;
+}
+
+.banner-icon {
+position: absolute;
+top: 20px;
+right: 30px;
+background-color: #ffffff;
+height: 50px;
+width: 50px;
+display: flex;
+justify-content: center;
+border-radius: 10px;
+}
+
+.banner-icon a {
+font-size: 32px;
+color: #000;
+font-weight: 700;
+}
+
+
+/************banner*********/
 
 .more-products {
   grid-area: more-products;
@@ -219,8 +286,6 @@ i {
   display: flex;
 }
 
-
-
 .search-container .search-input {
   flex-grow: 1;
   min-width: 180px;
@@ -260,12 +325,6 @@ i {
 .search-icon {
   background: none;
 }
-
-
-
-
-
-
 
 
 .home-overall {
@@ -505,6 +564,7 @@ nav>ul>li>a:hover {
   border: 1px solid var(--color-border);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .clothes:hover {
@@ -526,6 +586,16 @@ nav>ul>li>a:hover {
 
 .clothes button:hover {
   background-color: var(--color-hover);
+}
+
+.heart-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.heart-icon i {
+  color: red;
 }
 
 /****CART LIST PRODUCTS****/
@@ -962,7 +1032,21 @@ nav>ul>li>a:hover {
     .search-container .search-input {
       width: 150px;
     }
+
+    .banner-icon {
+      top: 10px;
+      right: 10px;
+      height: 30px;
+      width: 30px;
+    }
+    
+    .banner-icon a {
+      font-size: 22px;
+    }
    
+    .banner-promo {
+      border-radius: 20px;
+    }
 }
 
 @media (max-width: 1000px) {
