@@ -21,7 +21,7 @@
 
 body {
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: #f8f5f0;
 }
 
 
@@ -33,12 +33,9 @@ body {
   'about'
   'products'
   'banner'
-  'more-products'
-  'payments'
-  'contact'
   'footer';
-  grid-template-rows: repeat(10, auto);
-  row-gap: 70px;
+  grid-template-rows: repeat(6, auto);
+  row-gap: 50px;
 }
 
 #sharedLayout {
@@ -158,16 +155,21 @@ span {
 color: #005ee3;  
 }
 
-button {
+button, a.button {
  background-color: var(--color-button); 
- color: #fff; /* Text color */
+ color: #fff; 
 border: none;
 font-size: 16px;
 font-weight: bold;
 border-radius: 5px;
 cursor: pointer;
 transition: all 0.3s ease;
-text-align: center;
+text-align: center
+}
+
+a.button {
+padding: 10px 14px;
+
 }
 
 i {
@@ -418,7 +420,9 @@ nav>ul>li>a:hover {
 
 /*******STYLE BUTTON*********/
 .shop-now-link {
-  text-decoration: none; /* Remove underline from link */
+  text-decoration: none; 
+  display: inline;
+  width: 250px;
 }
 
 .shop-now-btn {
@@ -431,7 +435,7 @@ nav>ul>li>a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: inline;
   text-align: center;
 }
 
@@ -1012,6 +1016,7 @@ nav>ul>li>a:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 
 
 

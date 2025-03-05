@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
+    min-height: 100vh;
 }
 
 .wishlist-container {
@@ -15,6 +16,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex: 1;
+    min-height: 450px;
 }
 
 h2 {

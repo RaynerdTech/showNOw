@@ -1,0 +1,107 @@
+/* General Footer Styles */
+.footer {
+    /* From https://css.glass */
+/* From https://css.glass */
+background: rgb(0, 23, 88);
+      backdrop-filter: blur(10.5px);
+      -webkit-backdrop-filter: blur(10.5px);
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 50px;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+ 
+.footer-section h2 {
+    font-size: 20px;
+    color: #d3d3d3;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(179, 179, 179);
+}
+
+/* Social Media Icons */
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.fab {
+    color: rgb(120, 120, 120);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.fab:hover {
+    color: #353535;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #a1a1a1;
+    font-size: 14px;
+    color: #ffffff;
+    height: 50px;
+}
+
+.footer-bottom p {
+    margin-top: 40px;
+}
+
+.tweet, .insta {
+    color: white;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/wishlist.css">
     <script src="/wishlist.js"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/footer.css">
 </head>
 <body>
 
@@ -18,7 +19,19 @@
         <h2>My Wishlist</h2>
         <div id="wishlist-items" class="wishlist-grid"></div>
     </div>
+
+    <div id="footershare"></div>
+
+    <script>
+        document.addEventListener("footershareLoaded", () => {
+            const yearSpan = document.getElementById("year");
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+    <script src="/sharedFooter.html"></script>
     <script src="/shared.js" defer></script>
-    <script src="/script.js" defer></script> 
+    <script src="/script.js" defer></script>
 </body>
 </html>
